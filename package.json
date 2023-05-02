@@ -9,10 +9,7 @@
   "author": "Mykon",
   "license": "ISC",
   "dependencies": {
-<<<<<<< HEAD
-=======
     "cors": "^2.8.5",
->>>>>>> ab9ddc73ed3498f19449df9c22b7290660573acf
     "express": "^4.18.2",
     "nodemon": "^2.0.22"
   }
