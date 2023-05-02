@@ -36,9 +36,20 @@ function getLivro(req, res) {
 function postLivro(req, res) {
   try {
     const livroNovo = req.body;
+<<<<<<< HEAD
     insereLivro(livroNovo);
     res.status(201);
     res.send('Livro inserido com sucesso');
+=======
+    if (req.body.nome) {
+      insereLivro(livroNovo);
+      res.status(201);
+      res.send('Livro inserido com sucesso');
+    } else {
+      res.status(422);
+      res.send('O campo nome é obrigatório');
+    }
+>>>>>>> ab9ddc73ed3498f19449df9c22b7290660573acf
   } catch (error) {
     res.status(500);
     res.send(error.message);
@@ -66,9 +77,19 @@ function patchLivro(req, res) {
 function deleteLivro(req, res) {
   try {
     const id = req.params.id;
+<<<<<<< HEAD
 
     deletaLivroPorId(id);
     res.send('Livro deletado com sucesso.');
+=======
+    if (id && Number(id)) {
+      deletaLivroPorId(id);
+      res.send('Livro deletado com sucesso.');
+    } else {
+      res.status(422);
+      res.send('Id inválido');
+    }
+>>>>>>> ab9ddc73ed3498f19449df9c22b7290660573acf
   } catch (error) {
     res.status(500);
     res.send(error.message);
